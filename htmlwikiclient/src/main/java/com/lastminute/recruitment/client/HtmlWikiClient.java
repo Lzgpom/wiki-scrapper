@@ -1,5 +1,12 @@
 package com.lastminute.recruitment.client;
 
-public class HtmlWikiClient {
-    // this should have a method that returns a Html representation of a Wikipedia page
+import com.lastminute.recruitment.domain.WikiClient;
+import com.lastminute.recruitment.domain.WikiPage;
+
+public class HtmlWikiClient implements WikiClient {
+
+    @Override
+    public WikiPage parse(String content) {
+        return null;
+    }
 }
