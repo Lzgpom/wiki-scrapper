@@ -1,6 +1,7 @@
 package com.lastminute.recruitment.rest;
 
 import com.lastminute.recruitment.domain.WikiScrapper;
+import com.lastminute.recruitment.rest.request.WikiScrapeRequest;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,9 +17,8 @@ public class WikiScrapperResource {
         this.scrapper = scrapper;
     }
 
-    @PostMapping("/scrap")
-    public void scrapWikipedia(@RequestBody String link) {
-        scrapper.read(link);
+    @PostMapping(value = "/scrap")
+    public void scrapWikipedia(@RequestBody final WikiScrapeRequest request) {
+        scrapper.read(request.link());
     }
-
 }
