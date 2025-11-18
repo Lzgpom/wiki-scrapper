@@ -49,7 +49,7 @@ public class WikiScrapperConfiguration {
     }
 
     @Bean
-    public WikiScrapper wikiScrapper(final WikiParser parser, final WikiPageRepository repository) {
-        return new WikiScrapper(parser, repository);
+    public WikiScrapper wikiScrapper(final WikiClient client, final WikiParser parser, final WikiPageRepository repository) {
+        return new WikiScrapper(client, parser, repository);
     }
 }
