@@ -21,24 +21,25 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.lastminute.recruitment</groupId>
+            <groupId>${project.groupId}</groupId>
             <artifactId>api</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>${project.version}</version>
+            <scope>compile</scope>
         </dependency>
         <dependency>
-            <groupId>com.lastminute.recruitment</groupId>
+            <groupId>${project.groupId}</groupId>
             <artifactId>persistence</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>com.lastminute.recruitment</groupId>
+            <groupId>${project.groupId}</groupId>
             <artifactId>jsonwikiclient</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>com.lastminute.recruitment</groupId>
+            <groupId>${project.groupId}</groupId>
             <artifactId>htmlwikiclient</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>${project.version}</version>
         </dependency>
 
         <dependency>

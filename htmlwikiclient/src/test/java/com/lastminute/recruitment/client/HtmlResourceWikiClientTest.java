@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 
-class JsonResourceWikiClientTest {
+class HtmlResourceWikiClientTest {
 
     @Nested
     class LoadLink {
@@ -15,7 +15,7 @@ class JsonResourceWikiClientTest {
         @Test
         void shouldLoadExistingResource() {
             // GIVEN
-            final var systemUnderTest = new JsonResourceWikiClient();
+            final var systemUnderTest = new HtmlResourceWikiClient();
             final var link = "http://wikiscrapper.test/site1";
 
             // WHEN
@@ -28,7 +28,7 @@ class JsonResourceWikiClientTest {
         @Test
         void shouldThrowExceptionWhenResourceNotFound() {
             // GIVEN
-            final var systemUnderTest = new JsonResourceWikiClient();
+            final var systemUnderTest = new HtmlResourceWikiClient();
             final var link = "wikiscrapper/nonexistent.json";
 
             // WHEN / THEN

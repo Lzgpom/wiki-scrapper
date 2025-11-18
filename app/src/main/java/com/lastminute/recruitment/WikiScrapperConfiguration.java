@@ -1,6 +1,7 @@
 package com.lastminute.recruitment;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.lastminute.recruitment.client.HtmlResourceWikiClient;
 import com.lastminute.recruitment.client.HtmlWikiParser;
 import com.lastminute.recruitment.client.JsonResourceWikiClient;
 import com.lastminute.recruitment.client.JsonWikiParser;
@@ -34,7 +35,7 @@ public class WikiScrapperConfiguration {
     @Bean
     @Profile(HTML_PROFILE)
     public WikiClient htmlResourceWikiClient() {
-        return new JsonResourceWikiClient();
+        return new HtmlResourceWikiClient();
     }
 
     @Bean

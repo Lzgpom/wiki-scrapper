@@ -17,7 +17,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @WebMvcTest(WikiScrapperResource.class)
 @ContextConfiguration(classes = {WikiScrapperResource.class, WikiScrapperControllerExceptionHandler.class})
-class JsonWikiScrapperResourceIntegrationTest {
+class WikiScrapperResourceIntegrationTest {
 
     @Autowired
     private MockMvc mockMvc;
