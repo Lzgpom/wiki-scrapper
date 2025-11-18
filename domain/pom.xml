@@ -20,9 +20,17 @@
         <java.version>16</java.version>
         <maven.compiler.source>16</maven.compiler.source>
         <maven.compiler.target>16</maven.compiler.target>
+
+        <guava.version>32.1.3-jre</guava.version>
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>33.4.8-jre</version>
+        </dependency>
+
         <!-- testing dependencies -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
