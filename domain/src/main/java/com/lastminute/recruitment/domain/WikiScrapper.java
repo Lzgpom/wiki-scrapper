@@ -1,14 +1,17 @@
 package com.lastminute.recruitment.domain;
 
-public class WikiScrapper {
+import com.lastminute.recruitment.client.WikiParser;
+import com.lastminute.recruitment.persistence.WikiPageRepository;
 
-    private final WikiClient client;
+import java.io.IOException;
 
-    public WikiScrapper(final WikiClient client) {
-        this.client = client;
-    }
+public record WikiScrapper(WikiParser parser, WikiPageRepository repository) {
 
-    public void read(String link) {
-        client.parse(link);
+    public void read(final String link) {
+        try {
+            parser.parse(null);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
