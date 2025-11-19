@@ -37,5 +37,12 @@ whole wikipedia from any root page and save it to the DB.
 
 Task implementation should be shared on some public repository (for example github)
 
+## Personal notes
+
+- The `WikiClient` was separated into:
+  - `WikiClient` which loads the link and returns the content as a `InputStream`.
+  - `WikiParser` which parses the `InputStream` and returns a `WikiPage` object.
+- This separation allows for better single responsibility and easier testing.
+
 
         
